@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <%= link_to "Explore", explore_records_users_path %>
+    <%= link_to "My Collection", records_users_path %>
+    <%= link_to "Add to My Collection", new_records_user_path %>
+
+    <%= link_to "Artist Overview - Download Record Collection's Stats", artist_overview_records_path(format: :csv) %>
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 

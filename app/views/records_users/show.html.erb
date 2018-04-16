@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Album Title:</strong>
   <%= @records_user.album_title %>
@@ -16,12 +14,25 @@
 </p>
 
 <p>
+  <strong>Rating:</strong>
+  <%= @records_user.rating %>
+</p>
+
+<p>
   <strong>Condition:</strong>
   <%= @records_user.condition.gsub('_', ' ').split.map(&:capitalize).join(" ") %>
 </p>
 
 <p>
   <strong> <% if @records_user.favorite %>Favorited &#9734;<% end %></strong>
+</p>
+
+<p>
+  <strong>Other users who added this record to their collection have liked: the album
+  <%= @recommended_based_on_most_recently_added_record.album_title.to_s.gsub('_', ' ').capitalize  %> by
+  <%= @recommended_based_on_most_recently_added_record.artist.capitalize %>, released in
+  <%= @recommended_based_on_most_recently_added_record.year %>.
+  </strong>
 </p>
 
 <%= link_to 'Edit', edit_records_user_path(@records_user) %> |

@@ -22,5 +22,4 @@ class RecordsController < ApplicationController
 		    end
 		end		
 	end
-
 end

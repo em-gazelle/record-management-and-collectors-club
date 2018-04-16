@@ -1,0 +1,6 @@
+<h3>Looking for inspiration? Recommendations? Want to know how unique your collection is?</h3>
+<% @analysis_stats_and_recommendations.each do |title, record| %>
+		<strong><%= title.to_s.gsub('_', ' ').capitalize %>:</strong>
+		<%= record %>
+	</br>
+<% end %>

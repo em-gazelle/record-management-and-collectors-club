@@ -10,9 +10,14 @@ class RecordsUsersController < ApplicationController
     
   end
 
+  def explore
+    @analysis_stats_and_recommendations = RecordsUser.record_analysis_stats(current_user.id)
+  end
+
   # GET /records_users/1
   # GET /records_users/1.json
   def show
+    @recommended_based_on_most_recently_added_record = RecordsUser.recommended_based_on_most_recently_added_record(current_user.id, @records_user.id)
   end
 
   # GET /records_users/new
