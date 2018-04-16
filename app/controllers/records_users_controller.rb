@@ -7,6 +7,7 @@ class RecordsUsersController < ApplicationController
   # GET /records_users.json
   def index
     @records_users = RecordsUser.where(user_id: current_user.id)#current_user.records
+    
   end
 
   # GET /records_users/1
