@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Album Title:</strong>
+  <%= @records_user.album_title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @records_user.artist %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @records_user.year %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @records_user.condition.gsub('_', ' ').split.map(&:capitalize).join(" ") %>
+</p>
+
+<p>
+  <strong> <% if @records_user.favorite %>Favorited &#9734;<% end %></strong>
+</p>
+
+<%= link_to 'Edit', edit_records_user_path(@records_user) %> |
+<%= link_to 'Back', records_users_path %>

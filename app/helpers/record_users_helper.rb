@@ -1,0 +1,2 @@
+module RecordUsersHelper
+end
