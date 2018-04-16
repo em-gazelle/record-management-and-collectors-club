@@ -19,7 +19,8 @@ Run `rspec` to run tests
 
 `rails s` to start the server
 
-Application is authenticated with Devise. Create your own account, or use sample account:
-user name:
-password:
+Application is authenticated with Devise. Create your own account, or use **sample account**:
+
+    user name: "sample@gmail.com"
+    password: "123456"
 
